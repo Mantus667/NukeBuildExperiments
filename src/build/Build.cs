@@ -18,14 +18,6 @@ using static Nuke.Common.Tools.DotNet.DotNetTasks;
 
 [CheckBuildProjectConfigurations]
 [ShutdownDotNetAfterServerBuild]
-[GitHubActions("ci",
-    GitHubActionsImage.MacOsLatest,
-    AutoGenerate = true,
-    OnPushBranches = new[] { "main", "develop", "feature/*", "releases/*" },
-    OnPullRequestBranches = new[] { "develop" },
-    InvokedTargets = new[] { nameof(Pack) }
-    //ImportSecrets = new[] { "NETLIFY_TOKEN", "NETLIFY_URL" }
-    )]
 class Build : NukeBuild
 {
     /// Support plugins are available for:
