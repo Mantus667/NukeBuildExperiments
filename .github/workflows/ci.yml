@@ -41,7 +41,7 @@ jobs:
             ~/.nuget/packages
           key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
       - name: Run './build.cmd Pack'
-        run: ./build.cmd Pack
+        run: sudo ./build.cmd Pack
       - uses: actions/upload-artifact@v1
         with:
           name: artifacts
