@@ -4,4 +4,27 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageId>Dummy-Framework</PackageId>
+    <Version>1.0.0</Version>
+
+    <PackageIconUrl></PackageIconUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageTags></PackageTags>
+
+    <RepositoryUrl>https://github.com/Mantus667/NukeBuildExperiments</RepositoryUrl>
+
+    <Description>Experiments with Nuke.</Description>
+    <PackageReleaseNotes>
+    </PackageReleaseNotes>
+
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+    <ContentTargetFolders>content</ContentTargetFolders>
+
+  </PropertyGroup>
+
 </Project>
