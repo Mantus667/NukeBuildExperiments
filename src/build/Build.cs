@@ -19,7 +19,7 @@ using static Nuke.Common.Tools.DotNet.DotNetTasks;
 [CheckBuildProjectConfigurations]
 [ShutdownDotNetAfterServerBuild]
 [GitHubActions("ci",
-    GitHubActionsImage.UbuntuLatest,
+    GitHubActionsImage.MacOsLatest,
     AutoGenerate = true,
     OnPushBranches = new[] { "main", "develop", "feature/*", "releases/*" },
     OnPullRequestBranches = new[] { "develop" },
