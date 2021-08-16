@@ -40,8 +40,10 @@ jobs:
             .nuke/temp
             ~/.nuget/packages
           key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
-      - name: Make executeable
+      - name: Make build.cmd executeable
         run: chmod +x ./build.cmd
+      - name: Make build.sh executeable
+        run: chmod +x ./build.sh
       - name: Run './build.cmd Pack'
         run: sudo ./build.cmd Pack
       - uses: actions/upload-artifact@v1
