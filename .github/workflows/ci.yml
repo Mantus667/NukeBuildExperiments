@@ -45,7 +45,7 @@ jobs:
       - name: Make build.sh executeable
         run: chmod +x ./build.sh
       - name: Run './build.cmd CreateRelease'
-        run: sudo ./build.cmd CreateRelease -- GithubRepositoryAuthToken ${{ secrets.RepositoryToken }}
+        run: sudo ./build.cmd CreateRelease -GithubRepositoryAuthToken ${{ secrets.RepositoryToken }}
       - uses: actions/upload-artifact@v1
         with:
           name: artifacts
