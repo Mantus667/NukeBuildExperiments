@@ -44,8 +44,8 @@ jobs:
         run: chmod +x ./build.cmd
       - name: Make build.sh executeable
         run: chmod +x ./build.sh
-      - name: Run './build.cmd Pack'
-        run: sudo ./build.cmd Pack
+      - name: Run './build.cmd CreateRelease'
+        run: sudo ./build.cmd CreateRelease -- GithubRepositoryAuthToken ${{secret.RepositoryToken}}
       - uses: actions/upload-artifact@v1
         with:
           name: artifacts
