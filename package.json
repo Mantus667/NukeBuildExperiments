@@ -1,0 +1,24 @@
+{
+  "name": "nukebuildexperiments",
+  "version": "0.0.0",
+  "description": "Nuke build experiments",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mantus667/NukeBuildExperiments.git"
+  },
+  "keywords": [
+    "Nuke",
+    "Build",
+    "Coverlet",
+    "Github"
+  ],
+  "author": "David Brendel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mantus667/NukeBuildExperiments/issues"
+  },
+  "homepage": "https://github.com/Mantus667/NukeBuildExperiments#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.2.8"
+  }
+}
