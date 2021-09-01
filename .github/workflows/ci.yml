@@ -45,9 +45,9 @@ jobs:
       - name: Make build.sh executeable
         run: chmod +x ./build.sh
         # Use a GitHub Actions secret variable in a bash shell
-      - name: Run './build.cmd CreateRelease'
-        run: sudo ./build.cmd CreateRelease -GithubRepositoryAuthToken ${{ secrets.REPOSITORYTOKEN }}
-      - uses: actions/upload-artifact@v1
-        with:
-          name: artifacts
-          path: artifacts
+      - name: Run tests'
+        run: sudo ./build.cmd Test
+      #- uses: actions/upload-artifact@v1
+      #  with:
+      #    name: artifacts
+      #    path: artifacts

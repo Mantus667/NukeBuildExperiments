@@ -1,0 +1,33 @@
+name: release
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  macOS-latest:
+    name: macOS-latest
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Cache .nuke/temp, ~/.nuget/packages
+        uses: actions/cache@v2
+        with:
+          path: |
+            .nuke/temp
+            ~/.nuget/packages
+          key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
+      - name: Make build.cmd executeable
+        run: chmod +x ./build.cmd
+      - name: Make build.sh executeable
+        run: chmod +x ./build.sh
+        # Use a GitHub Actions secret variable in a bash shell
+      - name: Run './build.cmd CreateRelease'
+        run: sudo ./build.cmd CreateRelease -GithubRepositoryAuthToken ${{ secrets.REPOSITORYTOKEN }}
+      - name: Upload Documentation to Wiki
+        uses: SwiftDocOrg/github-wiki-publish-action@v1
+        with:
+          path: "docs"
+        env:
+          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.REPOSITORYTOKEN }}
