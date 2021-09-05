@@ -44,7 +44,6 @@ jobs:
         run: chmod +x ./build.cmd
       - name: Make build.sh executeable
         run: chmod +x ./build.sh
-        # Use a GitHub Actions secret variable in a bash shell
       - name: Run tests'
         run: sudo ./build.cmd Test
       #- uses: actions/upload-artifact@v1
