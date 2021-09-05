@@ -4,10 +4,10 @@ Here I try to explain the different tasks of the build script, the Github Workfl
 
 In this wiki you can find information about
 
-1. [[CommitLinter|CommitLinter.md]]
-2. [[Setting up Nuke|Nuke.md]]
-3. [[Run a build|Build.md]]
-4. [[Run tests|Tests.md]]
-5. [[Build nuget package|Pack.md]]
-6. [[Github CI Workflow|CI.md]]
-7. [[Github Release Workflow|Release.md]]
+1. [[CommitLinter|CommitLinter]]
+2. [[Setting up Nuke|Nuke]]
+3. [[Run a build|Build]]
+4. [[Run tests|Tests]]
+5. [[Build nuget package|Pack]]
+6. [[Github CI Workflow|CI]]
+7. [[Github Release Workflow|Release]]
